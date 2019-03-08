@@ -5,8 +5,15 @@
     <title>IntersectionObserver Detect online</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/IntersectionObserverDetect/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/IntersectionObserverDetect/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/IntersectionObserverDetect/favicon-16x16.png">
+    <link rel="manifest" href="/IntersectionObserverDetect/site.webmanifest">
+    <link rel="mask-icon" href="/IntersectionObserverDetect/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/IntersectionObserverDetect/favicon.ico">
+    <meta name="msapplication-TileColor" content="#9f00a7">
+    <meta name="msapplication-config" content="/IntersectionObserverDetect/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Anton|Playfair+Display" rel="stylesheet">
     <style>
       body,h1,html,img,li,nav{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}
@@ -16,9 +23,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
-        padding: 1em;
-        line-height:1
+        min-height: 100vh;
+        padding: 0 1em;
+        line-height: 1;
       }
       body.yes {
         background: lightgreen linear-gradient(lightgreen, white);
@@ -51,18 +58,20 @@
         color: darkred;
       }
     </style>
-    <meta name="theme-color" content="#fafafa" />
   </head>
-
   <body>
     <p>Does my browser support IntersectionObserver?</p>
-    <h1></h1>
+    <h1 id="answer"></h1>
+    <p id="comment"></p>
   </body>
-
   <script>
-    var h1 = document.getElementsByTagName("h1")[0];
+    var answerEl = document.getElementById("answer");
+    var commentEl = document.getElementById("comment");
     var support = ("IntersectionObserver" in window);
     document.body.classList.add(support ? "yes" : "no");
-    h1.innerHTML = support ? "Yes" : "No";
+    answerEl.innerHTML = support ? "Yes" : "No";
+    commentEl.innerHTML = support ?
+      "You're in <a href='https://caniuse.com/#feat=intersectionobserver'>good company</a>!" :
+      "Hang on, it <a href='https://caniuse.com/#feat=intersectionobserver'>soon will</a>."
   </script>
 </html>
