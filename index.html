@@ -21,7 +21,7 @@
         background: lightgreen linear-gradient(lightgreen, white);
       }
       body.no {
-        background-color: rosybrown linear-gradient(rosybrown, white);
+        background: rosybrown linear-gradient(rosybrown, white);
       }
       p {
         font-size: 2em;
@@ -42,7 +42,7 @@
   </head>
 
   <body>
-    <p>Does my browser support <code>IntersectionObserver</code>?</p>
+    <p>Does my browser support IntersectionObserver?</p>
     <h1></h1>
   </body>
 
@@ -50,6 +50,6 @@
     var h1 = document.getElementsByTagName("h1")[0];
     var support = ("IntersectionObserver" in window);
     document.body.classList.add(support ? "yes" : "no");
-    h1.innerHTML = support ? "Yes!" : "Not yet...";
+    h1.innerHTML = support ? "Yes!" : "No&ellip;";
   </script>
 </html>
