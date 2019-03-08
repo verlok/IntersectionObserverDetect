@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <style>
+      /* reset.min.css */ abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}ins,mark{background-color:#ff9;color:#000}body{line-height:1}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;font-size:100%;vertical-align:baseline;background:0 0}ins{text-decoration:none}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{height:1px;border:0;border-top:1px solid #ccc;margin:1em 0}input,select{vertical-align:middle}
+
+      body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+      }
+      body.yes {
+        background: lightgreen linear-gradient(lightgreen, white);
+      }
+      body.no {
+        background-color: rosybrown linear-gradient(rosybrown, white);
+      }
+      p {
+        font-size: 2em;
+        line-height: 1em;
+      }
+      h1 {
+        font-size: 12em;
+        line-height: 1em;
+      }
+      .yes h1 {
+        color: green;
+      }
+      .no h1 {
+        color: darkred;
+      }
+    </style>
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <p>Does my browser support <code>IntersectionObserver</code>?</p>
+    <h1></h1>
+  </body>
+
+  <script>
+    var h1 = document.getElementsByTagName("h1")[0];
+    var support = ("IntersectionObserver" in window);
+    document.body.classList.add(support ? "yes" : "no");
+    h1.innerHTML = support ? "Yes!" : "Not yet...";
+  </script>
+</html>
