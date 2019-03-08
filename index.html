@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Anton|Playfair+Display" rel="stylesheet">
     <style>
-      /* reset.min.css */ abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}ins,mark{background-color:#ff9;color:#000}body{line-height:1}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;font-size:100%;vertical-align:baseline;background:0 0}ins{text-decoration:none}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{height:1px;border:0;border-top:1px solid #ccc;margin:1em 0}input,select{vertical-align:middle}
+      body,h1,html,img,li,nav{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}
 
       body {
         text-align: center;
@@ -16,6 +17,8 @@
         flex-direction: column;
         justify-content: center;
         height: 100vh;
+        padding: 1em;
+        line-height:1
       }
       body.yes {
         background: lightgreen linear-gradient(lightgreen, white);
@@ -24,12 +27,22 @@
         background: rosybrown linear-gradient(rosybrown, white);
       }
       p {
-        font-size: 2em;
+        font-size: 1.8em;
         line-height: 1em;
+        font-family: "Playfair Display";
+        margin-bottom: 1em;
+        line-height: 1.3em;
+      }
+      @media (min-width: 350px) {
+        p {
+          font-size: 2em;
+        }
       }
       h1 {
         font-size: 12em;
-        line-height: 1em;
+        line-height: 1.2em;
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
       }
       .yes h1 {
         color: green;
