@@ -67,7 +67,7 @@
   <script>
     var answerEl = document.getElementById("answer");
     var commentEl = document.getElementById("comment");
-    var support = ("IntersectionObserver" in window);
+    var support = "IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype && "isIntersecting" in window.IntersectionObserverEntry.prototype;
     document.body.classList.add(support ? "yes" : "no");
     answerEl.innerHTML = support ? "Yes" : "No";
     commentEl.innerHTML = support ?
